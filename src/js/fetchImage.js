@@ -1,5 +1,5 @@
-const axios = require('axios').default;
-
+// const axios = require('axios').default;
+import axios from 'axios';
 export default class FetchImage {
   #BASE_URL = 'https://pixabay.com';
   #URL = 'api/';
