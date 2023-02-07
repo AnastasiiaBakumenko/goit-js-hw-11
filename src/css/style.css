@@ -48,7 +48,7 @@ body {
   .load-more{
     display: block;
     cursor: pointer;
-    margin: 16px auto 0 auto;
+    margin: 16px auto ;
     padding: 8px 16px;
     font-size: 20px;
     color: white;
@@ -87,7 +87,9 @@ body {
     display: flex;
     justify-content: space-around;
   }
-  
+  .hide {
+    display: none;
+  }
   .info-item {
     display: flex;
     flex-direction: column;

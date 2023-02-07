@@ -97,20 +97,18 @@ async function findImage() {
 
     if (arrayFindElement.length) {
       //Якщо є дані то додаємо їх в кінець галереї
-      //Дьоргаємо галерею щоб оновилася
       addImageToGallery(arrayFindElement);
 
       if (fetchImage.curentPage === 1) {
         //Якщо перша сторінкка то малюємо кнопку
         //і виводимо 'Hooray! We found totalHits images.';
-        // showButtonLoadMore(true);
-        enableInfiniteScrolling();
+        showButtonLoadMore(true);
         showInfo(`Hooray! We found ${totalHits} images.`);
       }
     } else {
       //Якщо даних нема то Ховаємо кнопку
       //Виводимо повідомлення
-      // showButtonLoadMore(false);
+      showButtonLoadMore(false);
       disableInfiniteScroll();
       showFailure(
         'Sorry, there are no images matching your search query. Please try again.'
@@ -143,10 +141,6 @@ function handleInfiniteScroll() {
       onClickButtonLoadMore();
     }
   }, 1000)();
-}
-
-function enableInfiniteScrolling() {
-  window.addEventListener('scroll', handleInfiniteScroll);
 }
 
 const disableInfiniteScroll = () => {
